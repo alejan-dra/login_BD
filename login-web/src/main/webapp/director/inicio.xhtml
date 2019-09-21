@@ -12,7 +12,7 @@
         <h:form>
             <p:panel header="#{msg.msgBienvenida}">
                 <h1>#{inicioDirectorController.user.rol} #{inicioDirectorController.user.nombres}</h1>
-                <p:commandButton value="#{msg.btnCerrar}" action="#{inicioAdministradorController.cerrarSesion()}" />
+                <p:commandButton value="#{msg.btnCerrar}" action="#{inicioDirectorController.cerrarSesion()}" />
             </p:panel>
         </h:form>
     </h:body>

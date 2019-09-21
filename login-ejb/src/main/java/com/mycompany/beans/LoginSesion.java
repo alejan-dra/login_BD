@@ -31,9 +31,9 @@ public class LoginSesion implements ILoginSesion {
     
     @Override
     public void agregarUsuarios(){
-        usuario1 = new Usuario("Alejandra", "subdirector", "alele", "1070968347");
-        usuario2 = new Usuario("Lorena", "Administrador", "lore", "12345678");
-        usuario3 = new Usuario("Hugo", "Trabajador", "javier", "876543210");
+        usuario1 = new Usuario("Alejandra", "director", "alele", "1070968347");
+        usuario2 = new Usuario("Lorena", "administrador", "lore", "123");
+        usuario3 = new Usuario("Hugo", "trabajador", "javier", "876543210");
         
         listaUsuarios.add(usuario1);
         listaUsuarios.add(usuario2);

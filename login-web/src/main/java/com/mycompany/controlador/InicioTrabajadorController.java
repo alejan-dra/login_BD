@@ -40,7 +40,7 @@ public class InicioTrabajadorController implements Serializable{
                 faces.getExternalContext().getFlash().setKeepMessages(true);
                 faces.getExternalContext().redirect("./../login.xhtml");
             }
-            else if(!usuario.getRol().equals("Trabajador")){
+            else if(!usuario.getRol().equals("trabajador")){
                 FacesContext context = FacesContext.getCurrentInstance();
                 FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error",
                         "No tiene permisos para ingresar a esta sección del sitio.");
