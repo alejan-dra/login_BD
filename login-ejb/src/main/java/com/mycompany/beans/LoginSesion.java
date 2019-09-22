@@ -5,7 +5,7 @@
  */
 package com.mycompany.beans;
 
-import com.mycompany.dto.Usuario;
+import com.mycompany.dto.DTOUsuario;
 import com.mycompany.interfaces.ILoginSesion;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +19,10 @@ import javax.ejb.Stateful;
 @Stateful
 public class LoginSesion implements ILoginSesion {
 
-    private Usuario usuario1;
-    private Usuario usuario2;
-    private Usuario usuario3;
-    private List<Usuario> listaUsuarios;
+    private DTOUsuario usuario1;
+    private DTOUsuario usuario2;
+    private DTOUsuario usuario3;
+    private List<DTOUsuario> listaUsuarios;
 
     public LoginSesion() {
         listaUsuarios = new ArrayList();
@@ -31,9 +31,9 @@ public class LoginSesion implements ILoginSesion {
     
     @Override
     public void agregarUsuarios(){
-        usuario1 = new Usuario("Alejandra", "director", "alele", "1070968347");
-        usuario2 = new Usuario("Lorena", "administrador", "lore", "123");
-        usuario3 = new Usuario("Hugo", "trabajador", "javier", "876543210");
+        usuario1 = new DTOUsuario("Alejandra", "director", "alele", "1070968347");
+        usuario2 = new DTOUsuario("Lorena", "administrador", "lore", "123");
+        usuario3 = new DTOUsuario("Hugo", "trabajador", "javier", "876543210");
         
         listaUsuarios.add(usuario1);
         listaUsuarios.add(usuario2);
@@ -42,8 +42,8 @@ public class LoginSesion implements ILoginSesion {
     }
     
     @Override
-    public Usuario obtenerUsuario(String username, String password){
-        for (Usuario usuario : listaUsuarios) {
+    public DTOUsuario obtenerUsuario(String username, String password){
+        for (DTOUsuario usuario : listaUsuarios) {
             if(usuario.getUsername().equals(username) && usuario.getPassword().equals(password)){
                 return usuario;
             }
